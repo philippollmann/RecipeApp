@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="at.ollmann.philipp.recipeapp">
 
-    <uses-permission android:name="android.permission.INTERNET">
-
-    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -14,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeApp">
         <activity
+            android:name=".RecipeDetails"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -22,6 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

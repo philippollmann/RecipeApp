@@ -1,8 +1,10 @@
 package at.ollmann.philipp.recipeapp
 
-data class Recipe(
-    val aggregateLikes: Int,
-    val analyzedInstructions: List<AnalyzedInstruction>,
+import java.io.Serializable
+
+data class Recipe (
+    val aggregateLikes: Int?,
+    //val analyzedInstructions: List<AnalyzedInstruction>?,
     val cheap: Boolean,
     val cookingMinutes: Int,
     val creditsText: String,
@@ -18,8 +20,8 @@ data class Recipe(
     val imageType: String,
     val license: String,
     val lowFodmap: Boolean,
-    val nutrition: Nutrition,
-    val occasions: List<Any>,
+    //val nutrition: Nutrition,
+    //val occasions: List<Any>,
     val preparationMinutes: Int,
     val pricePerServing: Double,
     val readyInMinutes: Int,
@@ -36,4 +38,4 @@ data class Recipe(
     val veryHealthy: Boolean,
     val veryPopular: Boolean,
     val weightWatcherSmartPoints: Int
-)
+) : Serializable
