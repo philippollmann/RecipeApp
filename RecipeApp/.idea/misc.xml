@@ -5,8 +5,9 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.23958333333333334" />
+        <entry key="app/src/main/res/font/montserrat.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/row_items.xml" value="0.16086443728806027" />
+        <entry key="app/src/main/res/layout/row_items.xml" value="0.24563864882178155" />
       </map>
     </option>
   </component>
