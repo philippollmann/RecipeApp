@@ -9,8 +9,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recylerview_users"
         android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -87,74 +88,53 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:clickable="true"
-            app:checkedChip="@id/chip_vegan"
+            app:checkedChip="@id/chip_vegan8"
             app:singleLine="true"
             app:singleSelection="true">
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip_vegan"
+                android:id="@+id/chip_vegan8"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checkable="true"
                 android:checked="false"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="vegan"
+                android:fontFamily="@font/montserrat_light"
+                android:text="vegetarian"
+                app:chipBackgroundColor="@color/chip_colors_background"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="1dp"
+                android:textColor="@color/chip_colors_text"
                 app:checkedIconEnabled="false" />
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip_vegan0"
+                android:id="@+id/chip_vegan7"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checkable="true"
                 android:checked="false"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="Recipe"
+                android:fontFamily="@font/montserrat_light"
+                android:text="vegan"
+                app:chipBackgroundColor="@color/chip_colors_background"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="1dp"
+                android:textColor="@color/chip_colors_text"
                 app:checkedIconEnabled="false" />
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip_vegan1"
+                android:id="@+id/chip_vegan6"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checkable="true"
                 android:checked="false"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="vegan"
-                app:checkedIconEnabled="false" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_vegan2"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="true"
-                android:checked="false"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="vegan"
-                app:checkedIconEnabled="false" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_vegan3"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="true"
-                android:checked="false"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="vegan"
-                app:checkedIconEnabled="false" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip_vegan4"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checkable="true"
-                android:checked="false"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="vegan"
+                android:fontFamily="@font/montserrat_light"
+                android:text="gluten free"
+                app:chipBackgroundColor="@color/chip_colors_background"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="1dp"
+                android:textColor="@color/chip_colors_text"
                 app:checkedIconEnabled="false" />
 
             <com.google.android.material.chip.Chip
@@ -164,8 +144,42 @@
                 android:layout_height="wrap_content"
                 android:checkable="true"
                 android:checked="false"
-                android:fontFamily="@font/montserrat_medium"
+                android:fontFamily="@font/montserrat_light"
+                android:text="paleo"
+                app:chipBackgroundColor="@color/chip_colors_background"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="1dp"
+                android:textColor="@color/chip_colors_text"
+                app:checkedIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_vegan4"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="false"
+                android:fontFamily="@font/montserrat_light"
+                android:text="ketogenenic"
+                app:chipBackgroundColor="@color/chip_colors_background"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="1dp"
+                android:textColor="@color/chip_colors_text"
+                app:checkedIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_vegan3"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="false"
+                android:fontFamily="@font/montserrat_light"
                 android:text="vegan"
+                app:chipBackgroundColor="@color/chip_colors_background"
+                app:chipStrokeColor="@color/primary"
+                app:chipStrokeWidth="1dp"
+                android:textColor="@color/chip_colors_text"
                 app:checkedIconEnabled="false" />
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>

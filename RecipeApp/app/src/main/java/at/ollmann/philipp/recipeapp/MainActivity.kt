@@ -11,11 +11,9 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+const val BASE_URL = "https://api.spoonacular.com/recipes/"
 
 class MainActivity : AppCompatActivity() {
-
-
 
     private lateinit var binding: ActivityMainBinding
     lateinit var myAdapter: MyAdapter
@@ -44,15 +42,15 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("MainActivity", "getMyData: called")
 
-        retrofitData.enqueue(object : Callback<List<MyDataItem>?> {
-            override fun onResponse(call: Call<List<MyDataItem>?>, response: Response<List<MyDataItem>?>) {
+        retrofitData.enqueue(object : Callback<Recipes?> {
+            override fun onResponse(call: Call<Recipes?>, response: Response<Recipes?>) {
                 val responseBody = response.body()!!
                 myAdapter = MyAdapter(baseContext, responseBody)
                 myAdapter.notifyDataSetChanged()
                 binding.recylerviewUsers.adapter = myAdapter
             }
 
-            override fun onFailure(call: Call<List<MyDataItem>?>, t: Throwable) {
+            override fun onFailure(call: Call<Recipes?>, t: Throwable) {
                 Log.d("MainActivity", "onFailure: " + t.message)
             }
         })
