@@ -32,7 +32,7 @@
                 android:background="@color/primary"
                 android:cropToPadding="false"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/ic_image"
+                android:src="@drawable/ic_image"
                 tools:ignore="ImageContrastCheck" />
         </androidx.cardview.widget.CardView>
 
@@ -51,22 +51,89 @@
             app:layout_constraintTop_toBottomOf="@+id/cardView"
             tools:text="Yerba Mate" />
 
-        <TextView
-            android:id="@+id/userId"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:fontFamily="@font/montserrat_medium"
-            android:textColor="@color/grey"
-            android:textSize="14sp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title"
-            tools:text="This Description is crazy!" />
+            app:layout_constraintTop_toBottomOf="@+id/title">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_thumbs_up" />
+
+            <TextView
+                android:id="@+id/label_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginEnd="30dp"
+                android:textAlignment="center"
+                tools:text="256" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_clock" />
+
+            <TextView
+                android:id="@+id/label_minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginEnd="30dp"
+                tools:text="30" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_dollar_sign" />
+
+            <TextView
+                android:id="@+id/label_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginEnd="30dp"
+                tools:text="112.93" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:scaleType="fitStart"
+                android:src="@drawable/ic_heart" />
+
+            <TextView
+                android:id="@+id/label_health"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginEnd="30dp"
+                tools:text="30" />
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

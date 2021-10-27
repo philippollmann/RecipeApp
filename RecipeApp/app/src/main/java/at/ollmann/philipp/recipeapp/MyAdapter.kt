@@ -12,12 +12,19 @@ import com.squareup.picasso.Picasso
 class MyAdapter(val context: Context, val recipeList: Recipes) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        var userId: TextView
+        var likes: TextView
+        var minutes: TextView
+        var price: TextView
+        var health: TextView
         var title: TextView
         var imageView: ImageView
 
         init {
-            userId = itemView.findViewById(R.id.userId)
+            likes = itemView.findViewById(R.id.label_likes)
+            price = itemView.findViewById(R.id.label_money)
+            minutes = itemView.findViewById(R.id.label_minutes)
+            health = itemView.findViewById(R.id.label_health)
+
             title = itemView.findViewById(R.id.title)
             imageView = itemView.findViewById(R.id.imageView)
         }
@@ -29,13 +36,16 @@ class MyAdapter(val context: Context, val recipeList: Recipes) : RecyclerView.Ad
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.userId.text = recipeList.results[position].sourceUrl
+        holder.price.text = recipeList.results[position].pricePerServing.toString()
+        holder.likes.text = recipeList.results[position].aggregateLikes.toString()
+        holder.minutes.text = recipeList.results[position].readyInMinutes.toString()
+        holder.health.text = recipeList.results[position].healthScore.toString()
+
         holder.title.text = recipeList.results[position].title
         Picasso.with(this.context)
             .load(recipeList.results[position].image)
             .placeholder(R.drawable.ic_image)
             .into(holder.imageView)
-        //holder.imageView.scaleType = ImageView.ScaleType.CENTER_CROP
     }
 
     override fun getItemCount(): Int {
