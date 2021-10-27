@@ -33,9 +33,9 @@ class MyAdapter(val context: Context, val userList: List<MyDataItem>) : Recycler
         holder.title.text = userList[position].title.toString()
         Picasso.with(this.context)
             .load("https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80")
-            .placeholder(R.mipmap.ic_launcher)
-            .resize(300,300)
+            .placeholder(R.drawable.ic_image)
             .into(holder.imageView)
+        //holder.imageView.scaleType = ImageView.ScaleType.CENTER_CROP
     }
 
     override fun getItemCount(): Int {

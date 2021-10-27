@@ -10,15 +10,16 @@
         android:id="@+id/recylerview_users"
         android:layout_width="409dp"
         android:layout_height="729dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleLabel"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/titleLabel"
+        android:id="@+id/label_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -29,13 +30,13 @@
         android:text="What would you like to cook?"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/searchCard"
+        app:layout_constraintBottom_toTopOf="@+id/card_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/searchCard"
+        android:id="@+id/card_search"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="40dp"
@@ -44,29 +45,129 @@
         android:layout_marginBottom="16dp"
         app:cardBackgroundColor="#F1F2F6"
         app:cardCornerRadius="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/recylerview_users"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleLabel">
+        app:layout_constraintTop_toBottomOf="@+id/label_title">
 
         <EditText
-            android:id="@+id/searchTextField"
+            android:id="@+id/textfield_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:autofillHints=""
             android:background="@null"
             android:backgroundTintMode="add"
             android:drawableStart="@drawable/ic_search"
             android:drawablePadding="10dp"
             android:ems="10"
-            android:hint="Recipe"
             android:fontFamily="@font/montserrat_medium"
+            android:hint="Recipe"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:singleLine="true"
             tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck,TextContrastCheck" />
     </androidx.cardview.widget.CardView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:scrollbarSize="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_search">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipgroup_diets"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            app:checkedChip="@id/chip_vegan"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_vegan"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="false"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="vegan"
+                app:checkedIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_vegan0"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="false"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Recipe"
+                app:checkedIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_vegan1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="false"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="vegan"
+                app:checkedIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_vegan2"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="false"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="vegan"
+                app:checkedIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_vegan3"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="false"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="vegan"
+                app:checkedIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_vegan4"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="false"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="vegan"
+                app:checkedIconEnabled="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_vegan5"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:checked="false"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="vegan"
+                app:checkedIconEnabled="false" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
