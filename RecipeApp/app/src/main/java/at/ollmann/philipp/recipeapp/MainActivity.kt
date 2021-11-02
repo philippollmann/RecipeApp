@@ -10,6 +10,14 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import android.R
+
+import com.google.android.material.chip.ChipGroup
+
+import com.google.android.material.chip.Chip
+
+
+
 
 const val BASE_URL = "https://api.spoonacular.com/recipes/"
 
@@ -28,17 +36,27 @@ class MainActivity : AppCompatActivity() {
         linearLayoutManager = LinearLayoutManager(this)
         binding.recylerviewUsers.layoutManager = linearLayoutManager
 
-        getMyData()
+        enumValues<Diets>().forEach {
+            var diet = it
+            val chip = Chip(this)
+            chip.text = it.key
+            chip.isCheckable = true
+            chip.setOnClickListener{
+                getMyData(diet)
+            }
+            binding.chipgroupDiets.addView(chip)
+        }
+        getMyData(Diets.PALEO)
     }
 
-    private fun getMyData() {
+    private fun getMyData(diet: Diets) {
         val retrofitBuilder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
             .build()
             .create(ApiInterface::class.java)
 
-        val retrofitData = retrofitBuilder.getData()
+        val retrofitData = retrofitBuilder.getData(diet.key)
 
         Log.d("MainActivity", "getMyData: called")
 
