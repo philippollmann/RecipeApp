@@ -14,6 +14,7 @@
         <entry key="app/src/main/res/font/montserrat.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14539280016423092" />
         <entry key="app/src/main/res/layout/activity_recipe_details.xml" value="0.16640625" />
+        <entry key="app/src/main/res/layout/custom_chip.xml" value="0.16041666666666668" />
         <entry key="app/src/main/res/layout/row_items.xml" value="0.16620651577283657" />
       </map>
     </option>

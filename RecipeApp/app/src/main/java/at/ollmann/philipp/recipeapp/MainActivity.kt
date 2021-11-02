@@ -10,10 +10,10 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import android.R
+import android.text.Editable
+import android.text.TextWatcher
 
 import com.google.android.material.chip.ChipGroup
-
 import com.google.android.material.chip.Chip
 
 
@@ -36,11 +36,20 @@ class MainActivity : AppCompatActivity() {
         linearLayoutManager = LinearLayoutManager(this)
         binding.recylerviewUsers.layoutManager = linearLayoutManager
 
+        binding.textfieldSearch.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                getMyData(Diets.PALEO, s.toString())
+            }
+        })
+
         enumValues<Diets>().forEach {
             var diet = it
-            val chip = Chip(this)
+            val chip = layoutInflater.inflate(R.layout.custom_chip, binding.chipgroupDiets, false) as Chip
             chip.text = it.key
-            chip.isCheckable = true
             chip.setOnClickListener{
                 getMyData(diet)
             }
@@ -49,14 +58,14 @@ class MainActivity : AppCompatActivity() {
         getMyData(Diets.PALEO)
     }
 
-    private fun getMyData(diet: Diets) {
+    private fun getMyData(diet: Diets, query: String? = null) {
         val retrofitBuilder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
             .build()
             .create(ApiInterface::class.java)
 
-        val retrofitData = retrofitBuilder.getData(diet.key)
+        val retrofitData = retrofitBuilder.getData(diet.key, query)
 
         Log.d("MainActivity", "getMyData: called")
 
