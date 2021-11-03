@@ -20,7 +20,7 @@ data class Recipe (
     val imageType: String,
     val license: String,
     val lowFodmap: Boolean,
-    //val nutrition: Nutrition,
+    val nutrition: Nutrition,
     //val occasions: List<Any>,
     val preparationMinutes: Int,
     val pricePerServing: Double,

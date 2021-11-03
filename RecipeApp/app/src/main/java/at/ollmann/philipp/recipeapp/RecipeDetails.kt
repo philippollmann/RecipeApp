@@ -28,6 +28,11 @@ class RecipeDetails : AppCompatActivity() {
                 .into(binding.imageTitle)
         }
 
+        binding.activityRecipeDetailsHealthLabel.text = recipe?.healthScore.toString() + " ${getResources().getString(R.string.health)}"
+        binding.activityRecipeDetailsLikesLabel.text = recipe?.aggregateLikes.toString() + " ${getResources().getString(R.string.likes)}"
+        binding.activityRecipeDetailsTimeLabel.text = recipe?.readyInMinutes.toString() + " ${getResources().getString(R.string.minutes)}"
+        binding.activityRecipeDetailsTitle.text = recipe?.title
+
         binding.buttonOpenRecipe.setOnClickListener{
             val uri: Uri = Uri.parse(recipe?.sourceUrl)
             val intent = Intent(Intent.ACTION_VIEW, uri)

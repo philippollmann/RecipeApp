@@ -21,10 +21,10 @@ class MyAdapter(val context: Context, val recipeList: Recipes) : RecyclerView.Ad
         var imageView: ImageView
 
         init {
-            likes = itemView.findViewById(R.id.label_likes)
-            price = itemView.findViewById(R.id.label_money)
-            minutes = itemView.findViewById(R.id.label_minutes)
-            health = itemView.findViewById(R.id.label_health)
+            likes = itemView.findViewById(R.id.activity_recipe_details_likes_label)
+            price = itemView.findViewById(R.id.activity_recipe_details_price_label)
+            minutes = itemView.findViewById(R.id.activity_recipe_details_time_label)
+            health = itemView.findViewById(R.id.activity_recipe_details_health_label)
 
             title = itemView.findViewById(R.id.title)
             imageView = itemView.findViewById(R.id.imageView)
@@ -32,7 +32,9 @@ class MyAdapter(val context: Context, val recipeList: Recipes) : RecyclerView.Ad
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var itemView= LayoutInflater.from(context).inflate(R.layout.row_items, parent, false)
+        var itemView = LayoutInflater.from(context).inflate(R.layout.row_items, parent, false)
+
+
         return ViewHolder(itemView)
     }
 
@@ -41,7 +43,6 @@ class MyAdapter(val context: Context, val recipeList: Recipes) : RecyclerView.Ad
         holder.likes.text = recipeList.results[position].aggregateLikes.toString()
         holder.minutes.text = recipeList.results[position].readyInMinutes.toString()
         holder.health.text = recipeList.results[position].healthScore.toString()
-
         holder.title.text = recipeList.results[position].title
 
         holder.itemView.setOnClickListener{

@@ -7,7 +7,7 @@ import retrofit2.http.Query
 interface ApiInterface {
     @GET("complexSearch?apiKey=6893bf1fd60b4ec4884e40ebec146373")
     fun getData(
-        @Query("diet") diet: String,
+        @Query("diet") diet: String? = null,
         @Query("query") query: String? = null,
         @Query("addRecipeNutrition") addNutrition: Boolean = true,
         @Query("number") number: Int = 10,

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RecipeApp</string>
+    <string name="what_would_you_like_to_cook">What would you like to cook?</string>
+    <string name="recipe">Recipe</string>
+    <string name="likes">Likes</string>
+    <string name="minutes">Minutes</string>
+    <string name="health">Health</string>
 </resources>
