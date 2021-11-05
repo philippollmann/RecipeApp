@@ -9,11 +9,12 @@
         <entry key="app/src/main/res/drawable/ic_dollar_sign.xml" value="0.18981481481481483" />
         <entry key="app/src/main/res/drawable/ic_heart.xml" value="0.18981481481481483" />
         <entry key="app/src/main/res/drawable/ic_image.xml" value="0.19444444444444445" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1625" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.23958333333333334" />
         <entry key="app/src/main/res/drawable/ic_thumbs_up.xml" value="0.18981481481481483" />
         <entry key="app/src/main/res/font/montserrat.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14539280016423092" />
-        <entry key="app/src/main/res/layout/activity_recipe_details.xml" value="0.20196510174298316" />
+        <entry key="app/src/main/res/layout/activity_recipe_details.xml" value="0.22132708473822657" />
         <entry key="app/src/main/res/layout/custom_chip.xml" value="0.16041666666666668" />
         <entry key="app/src/main/res/layout/row_items.xml" value="0.16620651577283657" />
       </map>

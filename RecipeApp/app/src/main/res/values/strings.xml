@@ -5,4 +5,6 @@
     <string name="likes">Likes</string>
     <string name="minutes">Minutes</string>
     <string name="health">Health</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="servings">Servings</string>
 </resources>

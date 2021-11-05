@@ -87,7 +87,7 @@
                     android:layout_marginEnd="30dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:textAlignment="center"
-                    android:textColor="@color/grey"
+                    android:textColor="@color/darkgrey"
                     tools:text="256" />
             </LinearLayout>
 
@@ -113,7 +113,7 @@
                     android:layout_marginTop="2.5dp"
                     android:layout_marginEnd="30dp"
                     android:fontFamily="@font/montserrat_medium"
-                    android:textColor="@color/grey"
+                    android:textColor="@color/darkgrey"
                     tools:text="30" />
             </LinearLayout>
 
@@ -139,7 +139,7 @@
                     android:layout_marginTop="2.5dp"
                     android:layout_marginEnd="30dp"
                     android:fontFamily="@font/montserrat_medium"
-                    android:textColor="@color/grey"
+                    android:textColor="@color/darkgrey"
                     tools:text="112.93" />
             </LinearLayout>
 
@@ -165,7 +165,7 @@
                     android:layout_marginTop="2.5dp"
                     android:layout_marginEnd="30dp"
                     android:fontFamily="@font/montserrat_medium"
-                    android:textColor="@color/grey"
+                    android:textColor="@color/darkgrey"
                     tools:text="30" />
             </LinearLayout>
 

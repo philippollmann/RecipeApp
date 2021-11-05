@@ -32,6 +32,7 @@ class RecipeDetails : AppCompatActivity() {
         binding.activityRecipeDetailsLikesLabel.text = recipe?.aggregateLikes.toString() + " ${getResources().getString(R.string.likes)}"
         binding.activityRecipeDetailsTimeLabel.text = recipe?.readyInMinutes.toString() + " ${getResources().getString(R.string.minutes)}"
         binding.activityRecipeDetailsTitle.text = recipe?.title
+        binding.activityRecipeDetailsServingsLabel.text = "(" + recipe?.servings.toString() + " ${getResources().getString(R.string.servings)})"
 
         binding.buttonOpenRecipe.setOnClickListener{
             val uri: Uri = Uri.parse(recipe?.sourceUrl)

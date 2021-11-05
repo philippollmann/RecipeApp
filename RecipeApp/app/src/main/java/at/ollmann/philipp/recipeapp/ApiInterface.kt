@@ -9,7 +9,8 @@ interface ApiInterface {
     fun getData(
         @Query("diet") diet: String? = null,
         @Query("query") query: String? = null,
-        @Query("addRecipeNutrition") addNutrition: Boolean = true,
+        @Query("addRecipeInformation") addNutrition: Boolean = true,
+        @Query("fillIngredients") fillIngredients: Boolean = true,
         @Query("number") number: Int = 10,
     ) : Call<Recipes>
 }

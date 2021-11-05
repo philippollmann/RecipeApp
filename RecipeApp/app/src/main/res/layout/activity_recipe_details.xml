@@ -58,7 +58,7 @@
                         android:layout_weight="0"
                         android:scaleType="fitStart"
                         android:src="@drawable/ic_thumbs_up"
-                        android:tint="@color/primary" />
+                        app:tint="@color/primary" />
 
                     <TextView
                         android:id="@+id/activity_recipe_details_likes_label"
@@ -70,7 +70,7 @@
                         android:layout_marginEnd="0dp"
                         android:fontFamily="@font/montserrat_semi_bold"
                         android:textAlignment="center"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/lightgrey"
                         tools:text="256 likes" />
                 </LinearLayout>
 
@@ -88,7 +88,7 @@
                         android:layout_weight="0"
                         android:scaleType="fitStart"
                         android:src="@drawable/ic_clock"
-                        android:tint="@color/primary" />
+                        app:tint="@color/primary" />
 
                     <TextView
                         android:id="@+id/activity_recipe_details_time_label"
@@ -99,7 +99,7 @@
                         android:layout_marginTop="2.5dp"
                         android:layout_marginEnd="0dp"
                         android:fontFamily="@font/montserrat_semi_bold"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/lightgrey"
                         tools:text="30 minutes" />
                 </LinearLayout>
 
@@ -117,7 +117,7 @@
                         android:layout_weight="0"
                         android:scaleType="fitStart"
                         android:src="@drawable/ic_heart"
-                        android:tint="@color/primary" />
+                        app:tint="@color/primary" />
 
                     <TextView
                         android:id="@+id/activity_recipe_details_health_label"
@@ -128,7 +128,7 @@
                         android:layout_marginTop="2.5dp"
                         android:layout_marginEnd="0dp"
                         android:fontFamily="@font/montserrat_semi_bold"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/lightgrey"
                         tools:text="30 health" />
 
                 </LinearLayout>
@@ -163,6 +163,32 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <TextView
+                android:id="@+id/activity_recipe_details_ingridients_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/ingredients"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_recipe_details_title" />
+
+            <TextView
+                android:id="@+id/activity_recipe_details_servings_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="TextView"
+                android:textColor="@color/darkgrey"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/activity_recipe_details_ingridients_label"
+                app:layout_constraintTop_toBottomOf="@+id/activity_recipe_details_title" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
