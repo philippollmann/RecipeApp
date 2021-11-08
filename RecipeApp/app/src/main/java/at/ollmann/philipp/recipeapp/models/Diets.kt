@@ -1,4 +1,4 @@
-package at.ollmann.philipp.recipeapp
+package at.ollmann.philipp.recipeapp.models
 
 enum class Diets(val key: String) {
     VEGETARIAN("vegetarian"),

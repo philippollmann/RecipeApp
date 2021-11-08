@@ -1,4 +1,4 @@
-package at.ollmann.philipp.recipeapp
+package at.ollmann.philipp.recipeapp.models
 
 data class Step(
     val equipment: List<Equipment>,

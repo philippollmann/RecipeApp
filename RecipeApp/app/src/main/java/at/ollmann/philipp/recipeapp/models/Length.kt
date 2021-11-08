@@ -1,4 +1,4 @@
-package at.ollmann.philipp.recipeapp
+package at.ollmann.philipp.recipeapp.models
 
 data class Length(
     val number: Int,

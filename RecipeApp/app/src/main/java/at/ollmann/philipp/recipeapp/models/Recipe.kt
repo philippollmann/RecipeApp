@@ -1,4 +1,4 @@
-package at.ollmann.philipp.recipeapp
+package at.ollmann.philipp.recipeapp.models
 
 import java.io.Serializable
 

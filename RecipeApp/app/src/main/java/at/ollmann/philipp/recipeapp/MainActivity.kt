@@ -12,6 +12,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import android.text.Editable
 import android.text.TextWatcher
+import at.ollmann.philipp.recipeapp.models.Diets
+import at.ollmann.philipp.recipeapp.models.Recipes
 import com.google.android.material.chip.Chip
 
 const val BASE_URL = "https://api.spoonacular.com/recipes/"
@@ -19,7 +21,7 @@ const val BASE_URL = "https://api.spoonacular.com/recipes/"
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    lateinit var myAdapter: MyAdapter
+    lateinit var myAdapter: RecipeRecyclerViewAdapter
     lateinit var linearLayoutManager: LinearLayoutManager
 
     private var currentDiet: Diets? = null
@@ -67,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         retrofitData.enqueue(object : Callback<Recipes?> {
             override fun onResponse(call: Call<Recipes?>, response: Response<Recipes?>) {
                 val responseBody = response.body()!!
-                myAdapter = MyAdapter(baseContext, responseBody)
+                myAdapter = RecipeRecyclerViewAdapter(baseContext, responseBody)
                 myAdapter.notifyDataSetChanged()
                 binding.recylerviewUsers.adapter = myAdapter
             }

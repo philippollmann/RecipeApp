@@ -1,6 +1,6 @@
-package at.ollmann.philipp.recipeapp
+package at.ollmann.philipp.recipeapp.models
 
-data class Equipment(
+data class Ingredient(
     val id: Int,
     val image: String,
     val localizedName: String,

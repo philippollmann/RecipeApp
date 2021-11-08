@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/activity_recipe_detail_row_item_ingredient_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat_medium"
+        android:inputType="textCapSentences"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/darkgrey"
+        android:textSize="18sp"
+        tools:text="Sugar" />
+
+    <TextView
+        android:id="@+id/activity_recipe_detail_row_item_ingredient_amount_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textAlignment="textEnd"
+        android:textColor="@color/darkgrey"
+        android:textSize="18sp"
+        tools:text="1 tbsp" />
+</LinearLayout>

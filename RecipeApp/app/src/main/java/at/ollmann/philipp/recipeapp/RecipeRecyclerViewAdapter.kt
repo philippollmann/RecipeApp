@@ -8,9 +8,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import at.ollmann.philipp.recipeapp.models.Recipes
 import com.squareup.picasso.Picasso
 
-class MyAdapter(val context: Context, val recipeList: Recipes) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class RecipeRecyclerViewAdapter(val context: Context, val recipeList: Recipes) : RecyclerView.Adapter<RecipeRecyclerViewAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var likes: TextView
@@ -27,14 +28,12 @@ class MyAdapter(val context: Context, val recipeList: Recipes) : RecyclerView.Ad
             health = itemView.findViewById(R.id.activity_recipe_details_health_label)
 
             title = itemView.findViewById(R.id.title)
-            imageView = itemView.findViewById(R.id.imageView)
+            imageView = itemView.findViewById(R.id.activity_recipe_details_imageView)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var itemView = LayoutInflater.from(context).inflate(R.layout.row_items, parent, false)
-
-
+        var itemView = LayoutInflater.from(context).inflate(R.layout.activity_main_recipe_row_item, parent, false)
         return ViewHolder(itemView)
     }
 
