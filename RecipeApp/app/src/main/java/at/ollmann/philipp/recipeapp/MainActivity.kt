@@ -32,11 +32,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.recylerviewUsers.setHasFixedSize(true)
+        binding.activityMainRecylerviewRecipes.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(this)
-        binding.recylerviewUsers.layoutManager = linearLayoutManager
+        binding.activityMainRecylerviewRecipes.layoutManager = linearLayoutManager
 
-        binding.textfieldSearch.addTextChangedListener(object : TextWatcher {
+        binding.activityMainTextfieldSearch.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
             override fun afterTextChanged(s: Editable?) {
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         enumValues<Diets>().forEach {
             var diet = it
-            val chip = layoutInflater.inflate(R.layout.custom_chip, binding.chipgroupDiets, false) as Chip
+            val chip = layoutInflater.inflate(R.layout.diet_chip, binding.chipgroupDiets, false) as Chip
             chip.text = it.key
             chip.setOnClickListener{
                 currentDiet = diet
@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
                 val responseBody = response.body()!!
                 myAdapter = RecipeRecyclerViewAdapter(baseContext, responseBody)
                 myAdapter.notifyDataSetChanged()
-                binding.recylerviewUsers.adapter = myAdapter
+                binding.activityMainRecylerviewRecipes.adapter = myAdapter
             }
             override fun onFailure(call: Call<Recipes?>, t: Throwable) {
                 Log.d("MainActivity", "onFailure: " + t.message)

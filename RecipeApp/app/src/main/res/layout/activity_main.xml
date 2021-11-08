@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recylerview_users"
+        android:id="@+id/activity_main_recylerview_recipes"
         android:layout_width="409dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/label_title">
 
         <EditText
-            android:id="@+id/textfield_search"
+            android:id="@+id/activity_main_textfield_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

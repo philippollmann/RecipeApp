@@ -4,7 +4,7 @@ import java.io.Serializable
 
 data class Recipe(
     val aggregateLikes: Int,
-    //val analyzedInstructions: List<AnalyzedInstruction>,
+    val analyzedInstructions: List<AnalyzedInstruction>?,
     val cheap: Boolean,
     val cookingMinutes: Int,
     val creditsText: String,

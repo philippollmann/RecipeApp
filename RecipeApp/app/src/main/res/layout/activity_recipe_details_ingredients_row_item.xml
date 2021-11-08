@@ -12,10 +12,13 @@
         android:layout_weight="1"
         android:fontFamily="@font/montserrat_medium"
         android:inputType="textCapSentences"
+        android:lines="1"
+        android:maxLines="1"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:textColor="@color/darkgrey"
         android:textSize="18sp"
+        tools:ignore="TouchTargetSizeCheck"
         tools:text="Sugar" />
 
     <TextView
@@ -24,6 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.2"
         android:fontFamily="@font/montserrat_medium"
+        android:lines="1"
+        android:maxLines="1"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:textAlignment="textEnd"

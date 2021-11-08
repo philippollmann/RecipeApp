@@ -52,6 +52,12 @@ class RecipeDetails : AppCompatActivity() {
         if (recipe != null) {
             binding.activityRecipeDetailsIngredientsRecyclerView.layoutManager = GridLayoutManager(this, 1)
             binding.activityRecipeDetailsIngredientsRecyclerView.adapter = IngredientsRecyclerViewAdapter(this, recipe.extendedIngredients)
+            binding.activityRecipeDetailsInstructionsRecyclerView.layoutManager = GridLayoutManager(this, 1)
+            if(recipe.analyzedInstructions?.get(0)?.steps != null){
+                binding.activityRecipeDetailsInstructionsRecyclerView.adapter = InstructionsRecyclerViewAdapter(this,
+                    recipe.analyzedInstructions?.get(0)?.steps
+                )
+            }
         }
     }
 }
