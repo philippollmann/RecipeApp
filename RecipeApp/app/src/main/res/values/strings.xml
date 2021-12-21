@@ -7,4 +7,10 @@
     <string name="health">Health</string>
     <string name="ingredients">Ingredients</string>
     <string name="servings">Servings</string>
+    <string name="open_recipe">Open Recipe</string>
+    <string name="picture_of_recipe">Picture of Recipe</string>
+    <string name="like_icon">like icon</string>
+    <string name="clock_icon">clock icon</string>
+    <string name="heart_icon">heart icon</string>
+    <string name="money_icon">money icon</string>
 </resources>

@@ -30,6 +30,7 @@
                 android:layout_height="176dp"
                 android:adjustViewBounds="false"
                 android:background="@color/primary"
+                android:contentDescription="@string/picture_of_recipe"
                 android:cropToPadding="false"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_image"
@@ -62,7 +63,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title">
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -75,6 +77,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:contentDescription="@string/like_icon"
                     android:scaleType="fitStart"
                     android:src="@drawable/ic_thumbs_up" />
 
@@ -88,6 +91,7 @@
                     android:fontFamily="@font/montserrat_medium"
                     android:textAlignment="center"
                     android:textColor="@color/darkgrey"
+                    tools:ignore="TextContrastCheck"
                     tools:text="256" />
             </LinearLayout>
 
@@ -102,6 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:contentDescription="@string/clock_icon"
                     android:scaleType="fitStart"
                     android:src="@drawable/ic_clock" />
 
@@ -114,6 +119,7 @@
                     android:layout_marginEnd="30dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/darkgrey"
+                    tools:ignore="TextContrastCheck"
                     tools:text="30" />
             </LinearLayout>
 
@@ -128,6 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:contentDescription="@string/money_icon"
                     android:scaleType="fitStart"
                     android:src="@drawable/ic_dollar_sign" />
 
@@ -140,6 +147,7 @@
                     android:layout_marginEnd="30dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/darkgrey"
+                    tools:ignore="TextContrastCheck"
                     tools:text="112.93" />
             </LinearLayout>
 
@@ -154,6 +162,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:contentDescription="@string/heart_icon"
                     android:scaleType="fitStart"
                     android:src="@drawable/ic_heart" />
 
@@ -166,6 +175,7 @@
                     android:layout_marginEnd="30dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/darkgrey"
+                    tools:ignore="TextContrastCheck"
                     tools:text="30" />
             </LinearLayout>
 

@@ -22,7 +22,7 @@ class InstructionsRecyclerViewAdapter(val context: Context, val instructions: Li
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var itemView = LayoutInflater.from(context).inflate(R.layout.activity_recipe_details_instruction_row_item, parent, false)
-        return InstructionsRecyclerViewAdapter.ViewHolder(itemView)
+        return ViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

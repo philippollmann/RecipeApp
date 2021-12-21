@@ -26,8 +26,10 @@
                 android:id="@+id/image_title"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
+                android:contentDescription="@string/picture_of_recipe"
                 android:scaleType="centerCrop"
-                app:srcCompat="@mipmap/ic_launcher" />
+                app:srcCompat="@mipmap/ic_launcher"
+                tools:ignore="ImageContrastCheck,ImageContrastCheck" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -49,7 +51,8 @@
                         android:orientation="horizontal"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:baselineAligned="false">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -64,6 +67,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="0"
+                                android:contentDescription="@string/like_icon"
                                 android:scaleType="fitStart"
                                 android:src="@drawable/ic_thumbs_up"
                                 app:tint="@color/primary" />
@@ -79,6 +83,7 @@
                                 android:fontFamily="@font/montserrat_semi_bold"
                                 android:textAlignment="center"
                                 android:textColor="@color/lightgrey"
+                                tools:ignore="TextContrastCheck"
                                 tools:text="256 likes" />
                         </LinearLayout>
 
@@ -94,6 +99,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="0"
+                                android:contentDescription="@string/clock_icon"
                                 android:scaleType="fitStart"
                                 android:src="@drawable/ic_clock"
                                 app:tint="@color/primary" />
@@ -108,6 +114,7 @@
                                 android:layout_marginEnd="0dp"
                                 android:fontFamily="@font/montserrat_semi_bold"
                                 android:textColor="@color/lightgrey"
+                                tools:ignore="TextContrastCheck"
                                 tools:text="30 minutes" />
                         </LinearLayout>
 
@@ -122,7 +129,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_weight="0"
+                                android:contentDescription="@string/heart_icon"
                                 android:scaleType="fitStart"
                                 android:src="@drawable/ic_heart"
                                 app:tint="@color/primary" />
@@ -137,6 +144,7 @@
                                 android:layout_marginEnd="0dp"
                                 android:fontFamily="@font/montserrat_semi_bold"
                                 android:textColor="@color/lightgrey"
+                                tools:ignore="TextContrastCheck"
                                 tools:text="30 health" />
 
                         </LinearLayout>
@@ -151,12 +159,12 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="TextView"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                        tools:text="Pizza" />
 
                     <TextView
                         android:id="@+id/activity_recipe_details_ingridients_label"
@@ -178,11 +186,11 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="32dp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="TextView"
                         android:textColor="@color/darkgrey"
                         android:textSize="18sp"
                         app:layout_constraintStart_toEndOf="@+id/activity_recipe_details_ingridients_label"
-                        app:layout_constraintTop_toBottomOf="@+id/activity_recipe_details_title" />
+                        app:layout_constraintTop_toBottomOf="@+id/activity_recipe_details_title"
+                        tools:text="TextView" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/activity_recipe_details_ingredients_recycler_view"
@@ -216,7 +224,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="Open Recipe"
+                        android:text="@string/open_recipe"
                         app:cornerRadius="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"

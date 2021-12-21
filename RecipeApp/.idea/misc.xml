@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/layout/activity_recipe_details_ingredients_row_item.xml" value="0.18046758722428305" />
         <entry key="app/src/main/res/layout/activity_recipe_details_instruction_row_item.xml" value="0.174609375" />
         <entry key="app/src/main/res/layout/custom_chip.xml" value="0.16041666666666668" />
+        <entry key="app/src/main/res/layout/diet_chip.xml" value="0.15234375" />
         <entry key="app/src/main/res/layout/row_items.xml" value="0.16620651577283657" />
       </map>
     </option>

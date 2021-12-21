@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open_recipe">Open Recipe</string>
+    <string name="picture_of_recipe">Picture of Recipe</string>
+    <string name="clock_icon">clock icon</string>
+    <string name="heart_icon">heart icon</string>
+</resources>
