@@ -15,7 +15,7 @@
         <entry key="app/src/main/res/font/montserrat.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14539280016423092" />
         <entry key="app/src/main/res/layout/activity_main_recipe_row_item.xml" value="0.160546875" />
-        <entry key="app/src/main/res/layout/activity_recipe_details.xml" value="0.22132708473822657" />
+        <entry key="app/src/main/res/layout/activity_recipe_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_recipe_details_ingredients_row_item.xml" value="0.18046758722428305" />
         <entry key="app/src/main/res/layout/activity_recipe_details_instruction_row_item.xml" value="0.174609375" />
         <entry key="app/src/main/res/layout/custom_chip.xml" value="0.16041666666666668" />
