@@ -1,6 +1,6 @@
 # RecipeApp
 
-Simple Recipe Application in Android to filter the https://spoonacular.com/food-api/docs for different diets and keywoards.
+Simple Recipe Application in Android to filter the https://spoonacular.com/food-api/docs for different diets and keywords.
 
 Screenshots:
 
